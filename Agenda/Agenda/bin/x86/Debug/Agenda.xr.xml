@@ -39,6 +39,11 @@
       <RootProperty Name="Header" />
       <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="ImageSource" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Opacity" />
+    </RootType>
     <RootType FullName="Agenda.ListsPages" />
     <RootType FullName="Agenda.MainPage" />
   </Roots.RootTypes>

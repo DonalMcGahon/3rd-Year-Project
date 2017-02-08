@@ -8,6 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <TextBlock x:ConnectionId='1' x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is the opening page." VerticalAlignment="Top" Margin="86,222,0,0" Width="180" Height="77" FontSize="24"/>
         <Button x:ConnectionId='2' x:Name="button" Content="Go to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,304,0,0" Width="180"                     />
 

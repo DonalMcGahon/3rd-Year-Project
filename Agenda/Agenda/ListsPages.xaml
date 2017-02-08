@@ -11,7 +11,11 @@
     <Pivot x:Name ="pvtAgenda"  Title="Agenda">
         <!-- Pivot for TO-DO List List -->
         <PivotItem Header="TO-DO List">
-            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/to-do-image.jpg" 
+                        Stretch="UniformToFill" Opacity="0.5" />
+                </Grid.Background>
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is page two." VerticalAlignment="Top" Margin="86,222,0,0" Width="180" Height="77" FontSize="24"/>
                 <Button x:Name="button" Content="Go to page one" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,304,0,0" Width="180" Click="button_Click"/>
 
