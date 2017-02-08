@@ -334,6 +334,15 @@
     <AppxPackagedFile Include="C:\Users\dmcga\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\calendar.jpg">
+      <PackagePath>Images\calendar.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\fitness.jpg">
+      <PackagePath>Images\fitness.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\shopping-trolley.jpg">
+      <PackagePath>Images\shopping-trolley.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\to-do-image.jpg">
       <PackagePath>Images\to-do-image.jpg</PackagePath>
     </AppxPackagedFile>

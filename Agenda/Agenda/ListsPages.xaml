@@ -16,16 +16,60 @@
                     <ImageBrush ImageSource="Images/to-do-image.jpg" 
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is page two." VerticalAlignment="Top" Margin="86,222,0,0" Width="180" Height="77" FontSize="24"/>
-                <Button x:Name="button" Content="Go to page one" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,304,0,0" Width="180" Click="button_Click"/>
+                
+                <!-- Button to get back to home page -->
+                <Button x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+                
+                <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,36,0,0" Height="45" Width="74" Click="button1_Click"/>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,36,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="10,86,0,0" Height="43" Width="316" SelectionChanged="textBlock_SelectionChanged"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="10,134,0,0" Height="43" Width="316" SelectionChanged="textBlock_SelectionChanged"/>
 
             </Grid>
         </PivotItem>
-        
+        <!-- EndPivot for TO-DO List List -->
+
+
         <!-- Pivot for Shopping List -->
         <PivotItem x:Name ="pvtShopping" Header="Shopping-List">
-            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/shopping-trolley.jpg" 
+                        Stretch="UniformToFill" Opacity="0.5" />
+                </Grid.Background>
+                <!-- Button to get back to home page -->
+                <Button x:Name="button2" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
             </Grid>
         </PivotItem>
+        <!-- EndPivot for Shopping List -->
+
+        <!-- Pivot for Fitness Tracker List -->
+        <PivotItem x:Name ="pvtFitness" Header="Fitness-Scheduler">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/fitness.jpg" 
+                        Stretch="UniformToFill" Opacity="0.5" />
+                </Grid.Background>
+                <!-- Button to get back to home page -->
+                <Button x:Name="button3" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+            </Grid>
+        </PivotItem>
+        <!-- EndPivot for Fitness Tracker List -->
+
+        <!-- Pivot for Calendar Tracker List -->
+        <PivotItem x:Name ="pvtCalendar" Header="Calendar">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/calendar.jpg" 
+                        Stretch="UniformToFill" Opacity="0.5" />
+                </Grid.Background>
+                <!-- Button to get back to home page -->
+                <Button x:Name="button4" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+                <CalendarView HorizontalAlignment="Left" VerticalAlignment="Top" Height="354" Margin="10,79,0,0" Width="316"/>
+            </Grid>
+        </PivotItem>
+        <!-- EndPivot for Calendar List -->
+
+
     </Pivot>
 </Page>

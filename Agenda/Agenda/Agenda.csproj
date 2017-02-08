@@ -113,6 +113,9 @@
     <None Include="Agenda_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\calendar.jpg" />
+    <Content Include="Images\fitness.jpg" />
+    <Content Include="Images\shopping-trolley.jpg" />
     <Content Include="Images\to-do-image.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

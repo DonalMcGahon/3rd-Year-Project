@@ -31,5 +31,11 @@ namespace Agenda
         {
             this.Frame.Navigate(typeof(HomePage));
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            this.textBlock.Text = this.textBox.Text;
+                this.textBlock_Copy.Text = this.textBox.Text;
+        }
     }
 }
