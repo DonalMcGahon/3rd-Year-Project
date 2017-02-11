@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <!-- Pivot -->
-    <Pivot x:Name ="pvtAgenda"  Title="Agenda">
+    <Pivot x:ConnectionId='1' x:Name ="pvtAgenda"  Title="Agenda">
         <!-- Pivot for TO-DO List List -->
         <PivotItem Header="TO-DO List">
             <Grid>
@@ -18,16 +18,16 @@
                 </Grid.Background>
 
                 <!-- Button to get back to home page -->
-                <Button x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+                <Button x:ConnectionId='8' x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180"                      Height="36"/>
 
-                <Button x:Name="button1" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,36,0,0" Height="45" Width="74" Click="button1_Click"/>
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,36,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
+                <Button x:ConnectionId='9' x:Name="button1" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,36,0,0" Height="45" Width="74"                      />
+                <TextBox x:ConnectionId='10' x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,36,0,0" Height="45" Width="210"                                  />
 
-                <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,81,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
+                <TextBox x:ConnectionId='11' x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,81,0,0" Height="45" Width="210"                                  />
 
-                <Button x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,137,0,0" Click="button5_Click"/>
+                <Button x:ConnectionId='12' x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,137,0,0"                      />
 
-                <ListView Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="1,258,-15,238">
+                <ListView x:ConnectionId='13' Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="1,258,-15,238">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid Width="400">
@@ -54,40 +54,40 @@
 
 
         <!-- Pivot for Shopping List -->
-        <PivotItem x:Name ="pvtShopping" Header="Shopping-List">
+        <PivotItem x:ConnectionId='2' x:Name ="pvtShopping" Header="Shopping-List">
             <Grid>
                 <Grid.Background>
                     <ImageBrush ImageSource="Images/shopping-trolley.jpg" 
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
                 <!-- Button to get back to home page -->
-                <Button x:Name="button2" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+                <Button x:ConnectionId='7' x:Name="button2" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180"                      Height="36"/>
             </Grid>
         </PivotItem>
         <!-- EndPivot for Shopping List -->
 
         <!-- Pivot for Fitness Tracker List -->
-        <PivotItem x:Name ="pvtFitness" Header="Fitness-Scheduler">
+        <PivotItem x:ConnectionId='3' x:Name ="pvtFitness" Header="Fitness-Scheduler">
             <Grid>
                 <Grid.Background>
                     <ImageBrush ImageSource="Images/fitness.jpg" 
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
                 <!-- Button to get back to home page -->
-                <Button x:Name="button3" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+                <Button x:ConnectionId='6' x:Name="button3" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180"                      Height="36"/>
             </Grid>
         </PivotItem>
         <!-- EndPivot for Fitness Tracker List -->
 
         <!-- Pivot for Calendar Tracker List -->
-        <PivotItem x:Name ="pvtCalendar" Header="Calendar">
+        <PivotItem x:ConnectionId='4' x:Name ="pvtCalendar" Header="Calendar">
             <Grid>
                 <Grid.Background>
                     <ImageBrush ImageSource="Images/calendar.jpg" 
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
                 <!-- Button to get back to home page -->
-                <Button x:Name="button4" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+                <Button x:ConnectionId='5' x:Name="button4" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180"                      Height="36"/>
                 <CalendarView HorizontalAlignment="Left" VerticalAlignment="Top" Height="354" Margin="10,79,0,0" Width="316"/>
             </Grid>
         </PivotItem>
@@ -96,3 +96,4 @@
 
     </Pivot>
 </Page>
+

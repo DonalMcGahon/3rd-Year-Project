@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,24 @@ namespace Agenda
     /// </summary>
     public sealed partial class ListsPages : Page
     {
+
+        string path;
+        SQLite.Net.SQLiteConnection conn;
+
         public ListsPages()
         {
             this.InitializeComponent();
+
+            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path,
+            "db.sqlite");
+            conn = new SQLite.Net.SQLiteConnection(new
+               SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+
+            
+            conn.CreateTable<List>();
+            // Set ItemsSource to the sqlite data for ListView
+            myList.ItemsSource = conn.Table<List>();
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -34,8 +50,59 @@ namespace Agenda
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            this.textBlock.Text = this.textBox.Text;
-                this.textBlock_Copy.Text = this.textBox.Text;
+            //this.textBlock.Text = this.textBox.Text;
+            var s = conn.Insert(new List()
+            {
+                Name = textBox.Text,
+                Age = textBox_Copy.Text
+            });
+            // Update the ItemsSource for ListView
+            myList.ItemsSource = conn.Table<List>();
+
+        }
+
+        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            conn.DropTable<List>();
+            //conn.Execute("DELETE FROM List WHERE Name = ?", Name);
+
+            /*var query = conn.Table<List>();
+            string id = "";
+            string name = "";
+            string age = "";
+
+            foreach (var message in query)
+            {
+                id = id + " " + message.Id;
+                name = name + " " + message.Name;
+                age = age + " " + message.Age;
+            }
+
+            textBlock.Text = "ID: " + id + "\nName: " + name + "\nAge: " + age + "\n";
+            textBlock_Copy.Text = "\nAge: " + age;*/
+        }
+
+        private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
-}
+    }
+
+    public class List
+    {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Age { get; set; }
+    }

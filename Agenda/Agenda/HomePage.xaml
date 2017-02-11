@@ -7,9 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is page one." VerticalAlignment="Top" Margin="86,222,0,0" Width="180" Height="77" FontSize="24"/>
-        <Button x:Name="button" Content="Go to page two" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,304,0,0" Width="180" Click="button_Click"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/home.jpg" 
+                        Stretch="UniformToFill" Opacity="0.6" />
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="     Agenda" VerticalAlignment="Top" Margin="86,50,0,0" Width="180" Height="63" FontSize="24"/>
+        <Button x:Name="button" Content="Your Agenda" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,286,0,0" Width="180" Click="button_Click" Height="50"/>
 
     </Grid>
 </Page>

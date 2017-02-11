@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>A304E8930B84F36A272B095EB888D32826E5BDC9BBDB67C53000B546E3FEF8A7</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>1861F804F31F221F84F85CC630620033E25FB7F505F65972247FA9F30EDF6920</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>11a49f17-42fb-4614-8ce2-1f1957ebb767_1.0.0.0_x86__w6pt6brygzwvc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>11a49f17-42fb-4614-8ce2-1f1957ebb767_w6pt6brygzwvc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>11a49f17-42fb-4614-8ce2-1f1957ebb767</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-08T20:26:05.137</Modified>
+      <Modified>2017-02-11T19:34:06.020</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Agenda.exe">
       <PackagePath>entrypoint\Agenda.exe</PackagePath>
-      <Modified>2017-02-08T20:26:04.173</Modified>
+      <Modified>2017-02-11T19:34:05.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -99,6 +99,14 @@
     <AppxPackagedFile Include="C:\Users\dmcga\.nuget\packages\runtime.any.System.Private.DataContractSerialization\4.1.0\lib\netcore50\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
       <Modified>2016-02-21T21:35:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dmcga\.nuget\packages\SQLite.Net-PCL\3.1.1\lib\Windows8\SQLite.Net.Platform.WinRT.dll">
+      <PackagePath>SQLite.Net.Platform.WinRT.dll</PackagePath>
+      <Modified>2015-11-06T17:18:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dmcga\.nuget\packages\SQLite.Net.Core-PCL\3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll">
+      <PackagePath>SQLite.Net.dll</PackagePath>
+      <Modified>2015-11-06T17:18:40.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\.nuget\packages\System.AppContext\4.0.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -448,6 +456,10 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T22:11:12.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.16.2\Redist\Debug\x86\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2017-02-09T21:23:20.782</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\calendar.jpg">
       <PackagePath>Images\calendar.jpg</PackagePath>
       <Modified>2017-02-08T19:30:33.648</Modified>
@@ -455,6 +467,10 @@
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\fitness.jpg">
       <PackagePath>Images\fitness.jpg</PackagePath>
       <Modified>2017-02-08T19:13:58.738</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\home.jpg">
+      <PackagePath>Images\home.jpg</PackagePath>
+      <Modified>2017-02-10T17:09:22.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\Images\shopping-trolley.jpg">
       <PackagePath>Images\shopping-trolley.jpg</PackagePath>
@@ -504,7 +520,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Agenda.xr.xml">
       <PackagePath>Agenda.xr.xml</PackagePath>
-      <Modified>2017-02-08T20:26:03.965</Modified>
+      <Modified>2017-02-11T19:20:08.464</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -513,11 +529,11 @@
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-08T20:26:04.784</Modified>
+      <Modified>2017-02-11T19:34:05.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Core\Agenda.exe">
       <PackagePath>Agenda.exe</PackagePath>
-      <Modified>2017-02-08T20:26:05.125</Modified>
+      <Modified>2017-02-11T19:34:06.011</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

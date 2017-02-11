@@ -402,3 +402,5 @@ C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\SQLite.Net.Platform.WinRT.dll
+C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\SQLite.Net.dll

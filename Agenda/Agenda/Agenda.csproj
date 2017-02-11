@@ -115,6 +115,7 @@
   <ItemGroup>
     <Content Include="Images\calendar.jpg" />
     <Content Include="Images\fitness.jpg" />
+    <Content Include="Images\home.jpg" />
     <Content Include="Images\shopping-trolley.jpg" />
     <Content Include="Images\to-do-image.jpg" />
     <Content Include="Properties\Default.rd.xml" />
@@ -144,7 +145,11 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.16.2">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
