@@ -20,14 +20,16 @@
                 <!-- Button to get back to home page -->
                 <Button x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
 
-                <Button x:Name="button1" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,36,0,0" Height="45" Width="74" Click="button1_Click"/>
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,36,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
+                <AppBarButton x:Name="appBarButton" Icon="Add" HorizontalAlignment="Left" Label="Add" VerticalAlignment="Top" Margin="258,36,0,0" Click="appBarButton_Click">
+                </AppBarButton>
 
-                <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,81,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="To-Do:" VerticalAlignment="Top" Margin="10,25,0,0"/>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,50,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged" InputScope="Url" AutomationProperties.HelpText=""/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Completed By:" VerticalAlignment="Top" Margin="10,95,0,0"/>
+                <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,120,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
+                <Button x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0" Click="button5_Click"/>
 
-                <Button x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,137,0,0" Click="button5_Click"/>
-
-                <ListView Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="1,258,-15,238">
+                <ListView Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid Width="400">
@@ -38,15 +40,17 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <CheckBox HorizontalAlignment="Right"  VerticalAlignment="Center" x:Name="CheckBoxItem"/>
-                               
-                                <TextBlock Grid.Column="0" x:Name="Id" Text="{Binding Path=Id}" TextWrapping="Wrap" />
-                                <TextBlock Grid.Column="1" x:Name="medName" Text="{Binding Path=Name}" TextWrapping="Wrap" />
-                                <TextBlock Grid.Column="2" x:Name="medDose" Text="{Binding Path=Age}" TextWrapping="Wrap" />
+                                <CheckBox Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Center" x:Name="CheckBoxItem"/>
+                                <TextBlock Grid.Column="1" x:Name="Id" Text="{Binding Path=Id}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="2" x:Name="medName" Text="{Binding Path=Name}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="3" x:Name="medDose" Text="{Binding Path=Age}" TextWrapping="Wrap" />
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                
+
+
 
             </Grid>
         </PivotItem>

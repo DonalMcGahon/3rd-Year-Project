@@ -33,8 +33,7 @@ namespace Agenda
 
             path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path,
             "db.sqlite");
-            conn = new SQLite.Net.SQLiteConnection(new
-               SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+            conn = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
 
             
             conn.CreateTable<List>();
@@ -48,18 +47,6 @@ namespace Agenda
             this.Frame.Navigate(typeof(HomePage));
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            //this.textBlock.Text = this.textBox.Text;
-            var s = conn.Insert(new List()
-            {
-                Name = textBox.Text,
-                Age = textBox_Copy.Text
-            });
-            // Update the ItemsSource for ListView
-            myList.ItemsSource = conn.Table<List>();
-
-        }
 
         private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
@@ -75,26 +62,24 @@ namespace Agenda
         {
             conn.DropTable<List>();
             //conn.Execute("DELETE FROM List WHERE Name = ?", Name);
-
-            /*var query = conn.Table<List>();
-            string id = "";
-            string name = "";
-            string age = "";
-
-            foreach (var message in query)
-            {
-                id = id + " " + message.Id;
-                name = name + " " + message.Name;
-                age = age + " " + message.Age;
-            }
-
-            textBlock.Text = "ID: " + id + "\nName: " + name + "\nAge: " + age + "\n";
-            textBlock_Copy.Text = "\nAge: " + age;*/
+            
         }
 
         private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void appBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            var s = conn.Insert(new List()
+            {
+                Name = textBox.Text,
+                Age = textBox_Copy.Text
+                
+            });
+            // Update the ItemsSource for ListView
+            myList.ItemsSource = conn.Table<List>();
         }
     }
     }
