@@ -25,12 +25,15 @@ namespace Agenda
     {
 
         string path;
+        string path2;
         SQLite.Net.SQLiteConnection conn;
+        SQLite.Net.SQLiteConnection conn2;
 
         public ListsPages()
         {
             this.InitializeComponent();
 
+            // SQLite for TO-DO List
             path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path,
             "db.sqlite");
             conn = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
@@ -40,8 +43,20 @@ namespace Agenda
             // Set ItemsSource to the sqlite data for ListView
             myList.ItemsSource = conn.Table<List>();
 
+            // SQLite for Grocery List
+            path2 = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path,
+            "db.sqlite1");
+            conn2 = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path2);
+
+
+            conn.CreateTable<gList>();
+            // Set ItemsSource to the sqlite data for ListView
+            groceryList.ItemsSource = conn.Table<gList>();
+
+
         }
 
+        // TODO List Buttons and Textboxs etc.
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(HomePage));
@@ -75,19 +90,46 @@ namespace Agenda
             var s = conn.Insert(new List()
             {
                 Name = textBox.Text,
-                Age = textBox_Copy.Text
+                Date = textBox_Copy.Text
                 
             });
-            // Update the ItemsSource for ListView
+            // Updates the ItemsSource for ListView
             myList.ItemsSource = conn.Table<List>();
+        }
+
+        // Grocery List Buttons and Textboxs etc.
+        private void AddGrocery_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void done_Click(object sender, RoutedEventArgs e)
+        {
+            var g = conn.Insert(new gList()
+            {
+                gName = AddGrocery.Text
+
+            });
+            // Updates the ItemsSource for ListView
+            groceryList.ItemsSource = conn.Table<gList>();
         }
     }
     }
+// End TODO List Buttons and Textboxs etc.
 
-    public class List
+// Table for TO-DO List
+public class List
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Age { get; set; }
+        public string Date { get; set; }
     }
+
+// Table for Grocery List
+public class gList
+{
+    [PrimaryKey, AutoIncrement]
+    public int gId { get; set; }
+    public string gName { get; set; }
+}

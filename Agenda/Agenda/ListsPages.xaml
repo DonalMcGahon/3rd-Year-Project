@@ -17,6 +17,7 @@
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
 
+
                 <!-- Button to get back to home page -->
                 <Button x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
 
@@ -42,13 +43,13 @@
                                 </Grid.ColumnDefinitions>
                                 <CheckBox Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Center" x:Name="CheckBoxItem"/>
                                 <TextBlock Grid.Column="1" x:Name="Id" Text="{Binding Path=Id}" TextWrapping="Wrap" />
-                                <TextBlock Grid.Column="2" x:Name="medName" Text="{Binding Path=Name}" TextWrapping="Wrap" />
-                                <TextBlock Grid.Column="3" x:Name="medDose" Text="{Binding Path=Age}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="2" x:Name="name" Text="{Binding Path=Name}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="3" x:Name="date" Text="{Binding Path=Date}" TextWrapping="Wrap" />
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                
+
 
 
 
@@ -64,8 +65,36 @@
                     <ImageBrush ImageSource="Images/shopping-trolley.jpg" 
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
+
+
+
+
                 <!-- Button to get back to home page -->
                 <Button x:Name="button2" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+
+                <TextBox x:Name="AddGrocery" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="256" Margin="10,10,0,0" TextChanged="AddGrocery_TextChanged"/>
+                <AppBarButton x:Name="done" HorizontalAlignment="Left" Icon="Accept" Label="Done" VerticalAlignment="Top" Width="60" Margin="266,12,0,0" Height="55" Click="done_Click"/>
+
+                <ListView Header="Grocery List" x:Name="groceryList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="400">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Center" x:Name="CheckBoxItem"/>
+                                <TextBlock Grid.Column="1" x:Name="gId" Text="{Binding Path=gId}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="2" x:Name="gname" Text="{Binding Path=gName}" TextWrapping="Wrap" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
             </Grid>
         </PivotItem>
         <!-- EndPivot for Shopping List -->

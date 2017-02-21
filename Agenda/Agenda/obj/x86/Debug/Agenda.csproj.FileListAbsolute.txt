@@ -315,7 +315,6 @@ C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\Agenda.csprojResolveAssemblyReference.cache
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\App.g.i.cs
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\App.g.cs
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\HomePage.g.i.cs
