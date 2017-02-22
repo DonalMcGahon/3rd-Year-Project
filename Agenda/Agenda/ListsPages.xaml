@@ -20,16 +20,21 @@
 
                 <!-- Button to get back to home page -->
                 <Button x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
-
+                <!-- AppBarButton to Add To the list -->
                 <AppBarButton x:Name="appBarButton" Icon="Add" HorizontalAlignment="Left" Label="Add" VerticalAlignment="Top" Margin="258,36,0,0" Click="appBarButton_Click">
                 </AppBarButton>
-
+                <!-- Textblock -->
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="To-Do:" VerticalAlignment="Top" Margin="10,25,0,0"/>
+                <!-- Textbox to allow user to input data -->
                 <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,50,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged" InputScope="Url" AutomationProperties.HelpText=""/>
+                <!-- Textblock -->
                 <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Completed By:" VerticalAlignment="Top" Margin="10,95,0,0"/>
+                <!-- Textbox to allow user to input data -->
                 <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,120,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
+                <!-- Button to Delete List -->
                 <Button x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0" Click="button5_Click"/>
 
+                <!-- List View of all TO-DO's user has put in -->
                 <ListView Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -71,14 +76,20 @@
 
                 <!-- Button to get back to home page -->
                 <Button x:Name="button2" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
-
-                <TextBox x:Name="AddGrocery" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="256" Margin="10,10,0,0" TextChanged="AddGrocery_TextChanged"/>
+                <!-- AutoSuggestButton to add to list, it can suggest items user may want to add to their grocery list -->
+                <AutoSuggestBox x:Name="AddGrocery" TextChanged="AutoSuggestBox_TextChanged"
+                    HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="256" Height="40">
+                </AutoSuggestBox>
+                <!-- AppBarButton to add user input to list -->
                 <AppBarButton x:Name="done" HorizontalAlignment="Left" Icon="Accept" Label="Done" VerticalAlignment="Top" Width="60" Margin="266,12,0,0" Height="55" Click="done_Click"/>
-
+                <!-- Delete List -->
+                <Button x:Name="groceryDelete" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0" Click="groceryDelete_Click"/>
+                
+                <!-- List View of all groceries user has put in -->
                 <ListView Header="Grocery List" x:Name="groceryList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Width="400">
+                        <DataTemplate >
+                            <Grid Width="400" Background="LightCoral">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />

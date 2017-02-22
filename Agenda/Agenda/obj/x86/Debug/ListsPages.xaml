@@ -19,18 +19,23 @@
 
 
                 <!-- Button to get back to home page -->
-                <Button x:ConnectionId='11' x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180"                      Height="36"/>
-
-                <AppBarButton x:ConnectionId='12' x:Name="appBarButton" Icon="Add" HorizontalAlignment="Left" Label="Add" VerticalAlignment="Top" Margin="258,36,0,0"                           >
+                <Button x:ConnectionId='12' x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180"                      Height="36"/>
+                <!-- AppBarButton to Add To the list -->
+                <AppBarButton x:ConnectionId='13' x:Name="appBarButton" Icon="Add" HorizontalAlignment="Left" Label="Add" VerticalAlignment="Top" Margin="258,36,0,0"                           >
                 </AppBarButton>
+                <!-- Textblock -->
+                <TextBlock x:ConnectionId='14' x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="To-Do:" VerticalAlignment="Top" Margin="10,25,0,0"/>
+                <!-- Textbox to allow user to input data -->
+                <TextBox x:ConnectionId='15' x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,50,0,0" Height="45" Width="210"                                   InputScope="Url" AutomationProperties.HelpText=""/>
+                <!-- Textblock -->
+                <TextBlock x:ConnectionId='16' x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Completed By:" VerticalAlignment="Top" Margin="10,95,0,0"/>
+                <!-- Textbox to allow user to input data -->
+                <TextBox x:ConnectionId='17' x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,120,0,0" Height="45" Width="210"                                  />
+                <!-- Button to Delete List -->
+                <Button x:ConnectionId='18' x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0"                      />
 
-                <TextBlock x:ConnectionId='13' x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="To-Do:" VerticalAlignment="Top" Margin="10,25,0,0"/>
-                <TextBox x:ConnectionId='14' x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,50,0,0" Height="45" Width="210"                                   InputScope="Url" AutomationProperties.HelpText=""/>
-                <TextBlock x:ConnectionId='15' x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Completed By:" VerticalAlignment="Top" Margin="10,95,0,0"/>
-                <TextBox x:ConnectionId='16' x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,120,0,0" Height="45" Width="210"                                  />
-                <Button x:ConnectionId='17' x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0"                      />
-
-                <ListView x:ConnectionId='18' Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
+                <!-- List View of all TO-DO's user has put in -->
+                <ListView x:ConnectionId='19' Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid Width="400">
@@ -71,14 +76,20 @@
 
                 <!-- Button to get back to home page -->
                 <Button x:ConnectionId='7' x:Name="button2" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180"                      Height="36"/>
-
-                <TextBox x:ConnectionId='8' x:Name="AddGrocery" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="256" Margin="10,10,0,0"                                     />
+                <!-- AutoSuggestButton to add to list, it can suggest items user may want to add to their grocery list -->
+                <AutoSuggestBox x:ConnectionId='8' x:Name="AddGrocery"                                         
+                    HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="256" Height="40">
+                </AutoSuggestBox>
+                <!-- AppBarButton to add user input to list -->
                 <AppBarButton x:ConnectionId='9' x:Name="done" HorizontalAlignment="Left" Icon="Accept" Label="Done" VerticalAlignment="Top" Width="60" Margin="266,12,0,0" Height="55"                   />
-
-                <ListView x:ConnectionId='10' Header="Grocery List" x:Name="groceryList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
+                <!-- Delete List -->
+                <Button x:ConnectionId='10' x:Name="groceryDelete" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0"                            />
+                
+                <!-- List View of all groceries user has put in -->
+                <ListView x:ConnectionId='11' Header="Grocery List" x:Name="groceryList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Width="400">
+                        <DataTemplate >
+                            <Grid Width="400" Background="LightCoral">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
