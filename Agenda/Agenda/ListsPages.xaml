@@ -118,35 +118,77 @@
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
 
+                <!-- Heading -->
+                <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Exercises" VerticalAlignment="Top" Width="97" Margin="109,9,0,0" Height="22"/>
+
+                <!--Add Exercises Button -->
+                <Button x:Name="button1" Content="Add Exercises" HorizontalAlignment="Left" Height="28" Width="97" Margin="109,130,0,267" FontSize="12" Click="button1_Click"/>
+
                 <!-- Button to get back to home page -->
-                <Button x:Name="button3" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
+                <Button x:Name="button3" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,599,0,0" Width="180" Click="button_Click" Height="36"/>
+
+                <!--Stack Panel for Exercises-->
                 <StackPanel HorizontalAlignment="Left" Height="254" VerticalAlignment="Top" Width="248">
 
                     <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Exercises" Height="29" Margin="133,10,133,0" FontSize="18"/>
                     <TextBlock x:Name="textBlock2" Text="Exercise One" TextWrapping="Wrap" />
-                    <TextBox x:Name="textBox1"  InputScope="Number" TextWrapping="Wrap"/>
+                    <TextBox x:Name="textBox1"  InputScope="Number" TextWrapping="Wrap" TextChanged="textBox1_TextChanged"/>
                     <TextBlock x:Name="textBlock3" Text="Exercise Two" TextWrapping="Wrap"/>
-                    <TextBox x:Name="textBox2" TextWrapping="Wrap"/>
+                    <TextBox x:Name="textBox2" TextWrapping="Wrap" TextChanged="textBox2_TextChanged"/>
                     <TextBlock x:Name="textBlock4" Text="Exercise Three" TextWrapping="Wrap"/>
-                    <TextBox x:Name="textBox3" TextWrapping="Wrap"/>
+                    <TextBox x:Name="textBox3" TextWrapping="Wrap" TextChanged="textBox3_TextChanged"/>
                     <TextBlock x:Name="textBlock5" Text="Exercise Four" TextWrapping="Wrap"/>
-                    <TextBox x:Name="textBox4" TextWrapping="Wrap"/>
+                    <TextBox x:Name="textBox4" TextWrapping="Wrap" TextChanged="textBox4_TextChanged"/>
 
                 </StackPanel>
 
+                <!--Stack Panel for Reps-->
                 <StackPanel HorizontalAlignment="Left" Height="208" VerticalAlignment="Top" Width="75" Margin="254,39,0,0">
                     <TextBlock x:Name="textBlock9" TextWrapping="Wrap" Text="   Reps"/>
-                    <TextBox x:Name="textBox5" TextWrapping="Wrap" Height="30"/>
+                    <TextBox x:Name="textBox5" TextWrapping="Wrap" Height="30" TextChanged="textBox5_TextChanged"/>
                     <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Height="20" Text="   Reps"/>
-                    <TextBox x:Name="textBox6" TextWrapping="Wrap" Height="30"/>
+                    <TextBox x:Name="textBox6" TextWrapping="Wrap" Height="30" TextChanged="textBox6_TextChanged"/>
                     <TextBlock x:Name="textBlock7" TextWrapping="Wrap" Height="20" Text="   Reps"/>
-                    <TextBox x:Name="textBox7" TextWrapping="Wrap" Height="30"/>
+                    <TextBox x:Name="textBox7" TextWrapping="Wrap" Height="30" TextChanged="textBox7_TextChanged"/>
                     <TextBlock x:Name="textBlock8" TextWrapping="Wrap" Height="20" Text="   Reps"/>
-                    <TextBox x:Name="textBox8" TextWrapping="Wrap" Height="30"/>
-
+                    <TextBox x:Name="textBox8" TextWrapping="Wrap" Height="30" TextChanged="textBox8_TextChanged"/>
 
                 </StackPanel>
-                <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Exercises" VerticalAlignment="Top" Width="97" Margin="109,9,0,0" Height="22"/>
+
+                <!-- List View of all groceries user has put in -->
+                <ListView Header="Exercise List" x:Name="exerciseList" HorizontalAlignment="Left" Width="406" Margin="0,332,0,150">
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <Grid Width="400" Background="Transparent">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Center" x:Name="CheckBoxItem"/>
+                                <TextBlock Grid.Column="1" x:Name="eId" Text="{Binding Path=eId}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="2" x:Name="ex1" Text="{Binding Path=ex1}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="3" x:Name="ex2" Text="{Binding Path=ex2}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="4" x:Name="ex3" Text="{Binding Path=ex3}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="5" x:Name="ex4" Text="{Binding Path=ex4}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="6" x:Name="rep1" Text="{Binding Path=rep1}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="7" x:Name="rep2" Text="{Binding Path=rep2}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="8" x:Name="rep3" Text="{Binding Path=rep3}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="9" x:Name="rep4" Text="{Binding Path=rep4}" TextWrapping="Wrap" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!-- Delete Exercises -->
+                <Button x:Name="delete_Exercises" Content="Delete Exercises" HorizontalAlignment="Left" Height="33" Width="97" Margin="109,499,0,70" FontSize="11" Click="delete_Exercises_Click"/>
+
 
 
             </Grid>

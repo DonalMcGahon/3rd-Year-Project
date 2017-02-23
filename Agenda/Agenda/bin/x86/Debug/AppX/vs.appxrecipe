@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-22T22:45:09.024</Modified>
+      <Modified>2017-02-23T21:22:53.219</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Agenda.exe">
       <PackagePath>entrypoint\Agenda.exe</PackagePath>
-      <Modified>2017-02-22T22:45:07.808</Modified>
+      <Modified>2017-02-23T21:22:52.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -520,7 +520,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Agenda.xr.xml">
       <PackagePath>Agenda.xr.xml</PackagePath>
-      <Modified>2017-02-22T22:37:07.387</Modified>
+      <Modified>2017-02-23T20:06:03.947</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -529,11 +529,11 @@
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-22T22:45:08.691</Modified>
+      <Modified>2017-02-23T21:22:53.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Core\Agenda.exe">
       <PackagePath>Agenda.exe</PackagePath>
-      <Modified>2017-02-22T22:45:09.021</Modified>
+      <Modified>2017-02-23T21:22:53.215</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
