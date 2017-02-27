@@ -404,3 +404,8 @@ C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\SQLite.Net.Platform.WinRT.dll
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\SQLite.Net.dll
 C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\Agenda.csprojResolveAssemblyReference.cache
+C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\Register.g.i.cs
+C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\Register.g.cs
+C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\Register.xaml
+C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\obj\x86\Debug\Register.xbf
+C:\Users\dmcga\OneDrive\Documents\GitHub\3rd-Year-Project\Agenda\Agenda\bin\x86\Debug\Register.xbf

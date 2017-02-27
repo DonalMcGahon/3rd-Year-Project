@@ -132,19 +132,21 @@ namespace Agenda.Agenda_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[6];
             _typeNameTable[0] = "Agenda.HomePage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "Agenda.ListsPages";
             _typeNameTable[4] = "Agenda.MainPage";
+            _typeNameTable[5] = "Agenda.Register";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[6];
             _typeTable[0] = typeof(global::Agenda.HomePage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::Agenda.ListsPages);
             _typeTable[4] = typeof(global::Agenda.MainPage);
+            _typeTable[5] = typeof(global::Agenda.Register);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -182,6 +184,7 @@ namespace Agenda.Agenda_XamlTypeInfo
         private object Activate_0_HomePage() { return new global::Agenda.HomePage(); }
         private object Activate_3_ListsPages() { return new global::Agenda.ListsPages(); }
         private object Activate_4_MainPage() { return new global::Agenda.MainPage(); }
+        private object Activate_5_Register() { return new global::Agenda.Register(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -218,6 +221,13 @@ namespace Agenda.Agenda_XamlTypeInfo
             case 4:   //  Agenda.MainPage
                 userType = new global::Agenda.Agenda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Agenda.Register
+                userType = new global::Agenda.Agenda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_Register;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

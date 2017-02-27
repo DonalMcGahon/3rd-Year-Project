@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Agenda.Common;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -30,6 +31,29 @@ namespace Agenda
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(HomePage));
+        }
+
+        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            /*if (txtUser = Name)
+            {
+            }*/
+            this.Frame.Navigate(typeof(HomePage));
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Register));
         }
     }
 }
