@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Agenda.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Agenda"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="DarkBlue">
+        <Grid VerticalAlignment="Center" Background="White"
+              Margin="8"
+              Padding="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+
+            <TextBox x:ConnectionId='2' x:Name="txtUser"
+                     Grid.Row="0"
+                     PlaceholderText="Username"
+                     Margin="8"                                  />
+            <TextBox x:ConnectionId='3' x:Name="txtPassword"
+                     Grid.Row="1"
+                     PlaceholderText="Password"
+                     Margin="8"                                      />
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:ConnectionId='4' x:Name="btnRegister"
+                        Content="Register"
+                        Margin="100,10,100,10"
+                        Background="#DC143C"
+                        Foreground="White"
+                        HorizontalAlignment="Stretch" Grid.ColumnSpan="2"                          />
+            </Grid>
+
+        </Grid>
+        <Button x:ConnectionId='1' x:Name="button" Background="White" Content="Go to Main Page" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="125,304,0,20" Width="180"                     />
+
+
+    </Grid>
+</Page>
+

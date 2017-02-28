@@ -13,34 +13,17 @@
         <PivotItem Header="TO-DO List">
             <Grid>
                 <Grid.Background>
-                    <ImageBrush ImageSource="Images/to-do-image.jpg" 
+                    <ImageBrush ImageSource="Images/office.jpg" 
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
 
 
-                <!-- Button to get back to home page -->
-                <Button x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
-                <!-- AppBarButton to Add To the list -->
-                <AppBarButton x:Name="appBarButton" Icon="Add" HorizontalAlignment="Left" Label="Add" VerticalAlignment="Top" Margin="258,36,0,0" Click="appBarButton_Click">
-                </AppBarButton>
-                <!-- Textblock -->
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="To-Do:" VerticalAlignment="Top" Margin="10,25,0,0"/>
-                <!-- Textbox to allow user to input data -->
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,50,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged" InputScope="Url" AutomationProperties.HelpText=""/>
-                <!-- Textblock -->
-                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Completed By:" VerticalAlignment="Top" Margin="10,95,0,0"/>
-                <!-- Textbox to allow user to input data -->
-                <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,120,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
-                <!-- Button to Delete List -->
-                <Button x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0" Click="button5_Click"/>
-
                 <!-- List View of all TO-DO's user has put in -->
-                <ListView Header="TO-DO List" x:Name="myList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
+                <ListView Header="TO-DO List" x:Name="myList" HorizontalAlignment="Center" Height="auto" Width="auto" Margin="0,213,-14,283">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Grid Width="400">
+                            <Grid Width="500">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
@@ -55,8 +38,46 @@
                     </ListView.ItemTemplate>
                 </ListView>
 
+                <StackPanel HorizontalAlignment="Left" Height="664" VerticalAlignment="Top" Width="275" Margin="90,0,0,0">
+
+                    <!-- Textblock -->
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="To-Do:" VerticalAlignment="Top" Margin="20,25,0,0"/>
+
+                    <!-- Textbox to allow user to input data -->
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="20,0,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged" InputScope="Url" AutomationProperties.HelpText=""/>
+                    <!-- Textblock -->
+                    <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Completed By:" VerticalAlignment="Top" Margin="20,0,0,0"/>
+
+                    <!-- Textbox to allow user to input data -->
+                    <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="20,0,0,0" Height="45" Width="210" TextChanged="textBox_TextChanged"/>
 
 
+                    <!-- Button to Delete List -->
+                    <Button x:Name="button5" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,300,0,0" Click="button5_Click"/>
+
+                    <!-- Button to get back to home page -->
+                    <Button x:Name="button" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,50,0,0" Width="180" Click="button_Click" Height="36"/>
+
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="81" Margin="330,47,0,0">
+                    <StackPanel.Background>
+                        <ImageBrush Stretch="Fill"/>
+                    </StackPanel.Background>
+                    <!-- AppBarButton to Add To the list -->
+                    <Button x:Name="addButton" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0" Height="58" Width="62" Click="addButton_Click">
+                        <Button.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="Images/add.png"/>
+                        </Button.Background>
+                    </Button>
+
+
+                    <!--<AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0" Click="appBarButton_Click">
+                        <AppBarButton.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="Images/add.png"/>
+                        </AppBarButton.Background>
+                    </AppBarButton>-->
+                </StackPanel>
 
             </Grid>
         </PivotItem>
@@ -67,31 +88,44 @@
         <PivotItem x:Name ="pvtShopping" Header="Shopping-List">
             <Grid>
                 <Grid.Background>
-                    <ImageBrush ImageSource="Images/shopping-trolley.jpg" 
+                    <ImageBrush ImageSource="Images/grocery-shopping.jpg" 
                         Stretch="UniformToFill" Opacity="0.5" />
                 </Grid.Background>
 
 
+                <StackPanel HorizontalAlignment="Left" Height="660" VerticalAlignment="Top" Width="263" Margin="58,0,0,0">
 
+                    <!-- Textblock -->
+                    <TextBlock x:Name="Textblock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Add Grocery Item" VerticalAlignment="Top" Margin="10,0,0,0"/>
 
-                <!-- Button to get back to home page -->
-                <Button x:Name="button2" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,499,0,0" Width="180" Click="button_Click" Height="36"/>
-                <!-- AutoSuggestButton to add to list, it can suggest items user may want to add to their grocery list -->
-                <AutoSuggestBox x:Name="AddGrocery" TextChanged="AutoSuggestBox_TextChanged"
-                    HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="256" Height="40">
-                </AutoSuggestBox>
-                <!-- AppBarButton to add user input to list -->
-                <AppBarButton x:Name="done" HorizontalAlignment="Left" Icon="Accept" Label="Done" VerticalAlignment="Top" Width="60" Margin="266,12,0,0" Height="55" Click="done_Click"/>
-                <!-- Delete List -->
-                <Button x:Name="groceryDelete" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,408,0,0" Click="groceryDelete_Click"/>
+                    <!-- AutoSuggestButton to add to list, it can suggest items user may want to add to their grocery list -->
+                    <AutoSuggestBox x:Name="AddGrocery" TextChanged="AutoSuggestBox_TextChanged"
+                    HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="180" Height="31">
+                    </AutoSuggestBox>
+                    <!-- AppBarButton to add user input to list -->
+                    <AppBarButton x:Name="done" HorizontalAlignment="Left" Icon="Add" VerticalAlignment="Top" Width="118" Margin="103,5,0,0" Height="38" Click="done_Click"/>
+                    <!-- Delete List -->
+                    <Button x:Name="groceryDelete" Background="Transparent" Content="Delete List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,340,0,0" Click="groceryDelete_Click"/>
+                    <!-- Button to get back to home page -->
+                    <Button x:Name="button2" Background="Transparent" Content="Back to Home Page" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,20,0,0" Width="180" Click="button_Click" Height="36"/>
+
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="64" Margin="260,0,0,0">
+
+                    <!-- TextBlock-->
+                    <TextBlock  x:Name="Textblock2" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top"></TextBlock>
+                    <!-- TextBox-->
+                    <TextBox x:Name="textBox9" HorizontalAlignment="Left" TextWrapping="Wrap" Height="30" Width="auto" VerticalAlignment="Top" TextChanged="textBox9_TextChanged"/>
+
+                </StackPanel>
 
                 <!-- List View of all groceries user has put in -->
-                <ListView Header="Grocery List" x:Name="groceryList" HorizontalAlignment="Left" Width="350" Margin="0,213,-14,283">
+                <ListView Header="Grocery List" x:Name="groceryList" HorizontalAlignment="Center" Height="auto" Width="auto" Margin="0,215,0,280">
                     <ListView.ItemTemplate>
                         <DataTemplate >
-                            <Grid Width="400" Background="LightCoral">
+                            <Grid Width="400" Background="Transparent">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
@@ -100,10 +134,12 @@
                                 <CheckBox Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Center" x:Name="CheckBoxItem"/>
                                 <TextBlock Grid.Column="1" x:Name="gId" Text="{Binding Path=gId}" TextWrapping="Wrap" />
                                 <TextBlock Grid.Column="2" x:Name="gname" Text="{Binding Path=gName}" TextWrapping="Wrap" />
+                                <TextBlock Grid.Column="3" x:Name="gamount" Text="{Binding Path=gAmount}" TextWrapping="Wrap" />
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
 
 
             </Grid>
@@ -156,12 +192,11 @@
                 </StackPanel>
 
                 <!-- List View of all groceries user has put in -->
-                <ListView Header="Exercise List" x:Name="exerciseList" HorizontalAlignment="Left" Width="406" Margin="0,332,0,150">
+                <ListView Header="Exercise List" x:Name="exerciseList" HorizontalAlignment="Left" Height="auto" Width="auto" Margin="0,332,0,150">
                     <ListView.ItemTemplate>
                         <DataTemplate >
                             <Grid Width="400" Background="Transparent">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />

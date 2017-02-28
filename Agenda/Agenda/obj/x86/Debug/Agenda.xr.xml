@@ -10,6 +10,7 @@
     <RootPropertyPathName Name="ex2" />
     <RootPropertyPathName Name="ex1" />
     <RootPropertyPathName Name="eId" />
+    <RootPropertyPathName Name="gAmount" />
     <RootPropertyPathName Name="gName" />
     <RootPropertyPathName Name="gId" />
     <RootPropertyPathName Name="Date" />
@@ -89,10 +90,12 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Header" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemTemplate" />
@@ -115,9 +118,9 @@
       <RootProperty Name="Height" />
       <RootProperty Name="InputScope" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Text" />
       <RootProperty Name="PlaceholderText" />
       <RootEvent Name="TextChanged" />
@@ -133,7 +136,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />

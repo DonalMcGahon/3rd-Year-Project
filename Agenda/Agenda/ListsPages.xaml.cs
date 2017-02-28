@@ -101,13 +101,13 @@ namespace Agenda
             
         }
 
-        private void appBarButton_Click(object sender, RoutedEventArgs e)
+        private void addButton_Click(object sender, RoutedEventArgs e)
         {
             var s = conn.Insert(new List()
             {
                 Name = textBox.Text,
                 Date = textBox_Copy.Text
-                
+
             });
             // Updates the ItemsSource for ListView
             myList.ItemsSource = conn.Table<List>();
@@ -144,12 +144,18 @@ namespace Agenda
 
         }
 
+        private void textBox9_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         // Done button adding to Grocery List
         private void done_Click(object sender, RoutedEventArgs e)
         {
             var g = conn2.Insert(new gList()
             {
-                gName = AddGrocery.Text
+                gName = AddGrocery.Text,
+                gAmount = textBox9.Text
 
             });
             // Updates the ItemsSource for ListView
@@ -230,7 +236,6 @@ namespace Agenda
             // Updates the ItemsSource for ListView
             exerciseList.ItemsSource = conn3.Table<eList>();
         }
-
     }
     }
 
@@ -251,6 +256,7 @@ public class gList
     [PrimaryKey, AutoIncrement]
     public int gId { get; set; }
     public string gName { get; set; }
+    public string gAmount { get; set; }
 }
 
 // Table for Exericse List
